@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Rapport LSPD</title>
+        <link rel="stylesheet" href="style.css">
+        
+        
+
+    </head>
+
+        <!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                content="width=device-width, initial-scale=1.0">
+                <title>Patrouille HCZ</title>
+                <link rel="stylesheet" href="style.css">
+                
+                
+        
+            </head>
+            <body>
+        
+                <div class="intro">  <!-- intro avec les explications-->
+        
+                    <h1>Rapport</h1>
+                    <p>Pour l'utiliser, les consignes sont les suivants : <br> <br> 
+                        <ul>
+                            <li> Lorsque vous validez le rapport, cliquez qu'une seul fois, sinon vous risquez d'envoyer le rapport 14 fois</li>
+                            <li> Chaque case est a coché pour chaque fait validé</li>
+                    </ul>
+        
+                    </p>
+        
+                </div>
+        
+                <div class="container-faq"> <!-- menu déroulant-->
+            
+                    <div class="prez">
+                        <div class="PartiVisible">
+                            <h2>Données générales</h2>
+                            <img src="Fleche.png" alt="croix animation">
+                        </div>
+                        <div class="PanneauDéroulé">
+                            <br>
+                            <h4><u>Donnés sur les agents</u></h4>  <!-- Zone de text pour les noms -->
+                            <p>
+                                <textarea cols="50" rows="2" id="RedRapp" required>Agent rédigeant le rapport</textarea> 
+                                <br>
+                                <textarea cols="50" rows="5" id="PrésFait" required>Agents présent</textarea>
+                                <br>
+                                <textarea cols="50" rows="5" id="SuppRap" required>Superviseur du rapport</textarea>
+        
+                                <h4><u>Date des faits</u></h4>  <!-- Zone pour donner la date et l'heure des faits-->
+                                <p>
+                                    <input type="time" id="heureF" required>
+                                    <br>
+                                    <input type="date" id="dateF" placeholder="dd-mm-yyyy" min="2022-01-01" max="2048-12-31" required>
+                                    <br>
+                                    <h4><u>Date de rédaction du rapport</u></h4>  <!-- Zone pour donner la date et l'heure de la rédaction du rapport-->
+                                        <input type="time" id="heureR" required>
+                                        <br>
+                                        <input type="date" id="dateR" placeholder="dd-mm-yyyy" min="2022-01-01" max="2048-12-31" required>
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="container-faq"> <!-- menu déroulant-->
+            
+                    <div class="prez">
+                        <div class="PartiVisible">
+                            <h2>Droits Miranda</h2>
+                            <img src="Fleche.png" alt="croix animation">
+                        </div>
+                        <div class="PanneauDéroulé">
+                            <h4><u>Droits miranda</u></h4> <!-- PCS -->
+                            <p><strong> Rapelle des droits :</strong> Monsieur/Madame (nom de la personne ou X),  je vous informe que nous sommes le XX/XX/XXXX,  qu'il est XXhXX et que vous êtes placé en garde à vue pour le(s) fait(s) suivant(s) : XXXXXX. 
+                                <br> Vous avez le droit de garder le silence.  Si vous refusez de faire usage de ce droit,  tout ce que vous direz pourra et sera retenu contre vous devant une cour de Justice.  
+                                <br> Vous avez le droit d'avoir un avocat présent lors de votre interrogatoire.  Si vous n'en connaissez pas ou que vous n'avez pas les moyens de vous en payer un,  un avocat vous sera commis d'office.  
+                                <br>Cependant,  si aucun avocat n'est disponible,  vous serez dans l'obligation de constituer vous-même votre défense.  Vous avez aussi le droit à de la nourriture,  de la boisson ainsi qu'à une assistance médicale si nécessaire.  
+                                <br>Avez-vous bien compris vos droits ?  Si oui,  voulez-vous faire usage d'un de vos droits ? Si oui,  lequel ?
+                            
+                            </p>
+                            <br> <br>
+        
+        
+                            <h4><u>Donné a remplir</u></h4>  <!-- CheckBox -->
+                            <p>
+                                <input type="checkbox" id="DMirLu" /> Les droit miranda on était lu<br />
+                                <input type="checkbox" id="DMirComp" /> Le prévenu a compris ses droits<br />
+                                <input type="checkbox" id="DMirAvoOk" /> Le prévenu à demandé un avocat (et ce dernier était disponnible)<br />
+                                <textarea cols="50" rows="2" id="DMirAvoNom" required>Nom de l'avocat concerné </textarea>
+                                <br>
+                                <input type="checkbox" id="DMirAvoNOK" /> Le prévenu à demandé un avocat (mais il a était impossible de lui en fournir)<br />
+                                <input type="checkbox" id="DMirGlouglou" /> Le prévenu a souhaité à boire<br />
+                                <input type="checkbox" id="DMirMiammiam" /> Le prévenu a souhaité a manger à<br />
+                                <input type="checkbox" id="DMirPimpon" /> Le prévenu a souhaité une assistance médicale<br />
+                                
+
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-faq"> <!-- menu déroulant-->
+            
+                    <div class="prez">
+                        <div class="PartiVisible">
+                            <h2>Informations sur le prévenu</h2>
+                            <img src="Fleche.png" alt="croix animation">
+                        </div>
+                        <div class="PanneauDéroulé">
+                            <br> 
+        
+        
+                            <h4><u>Donné a remplir</u></h4>  <!-- CheckBox -->
+                            <p>
+                                <textarea cols="50" rows="2" id="PrevID" required>Nom et Prénom</textarea>
+                                <br>
+                                <textarea cols="50" rows="2" id="PrevTel" required>Numéro de téléphone du prévenu</textarea>
+                                <br>
+                                <textarea cols="50" rows="10" id="PrevFaits" required>Faits reproché au prévenu</textarea>
+                                <br>
+                                
+
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="container-faq"> <!-- menu déroulant-->
+            
+                    <div class="prez">
+                        <div class="PartiVisible">
+                            <h2>Description des faits</h2>
+                            <img src="Fleche.png" alt="croix animation">
+                        </div>
+                        <div class="PanneauDéroulé">
+                            <br> 
+        
+        
+                            <h4><u>Donné à remplir</u></h4>  <!-- CheckBox -->
+                            <p>
+                                <textarea cols="50" rows="2" id="FaitLieux" required>Lieux des faits</textarea>
+                                <br>
+                                <textarea cols="150" rows="5" id="FaitTem" required>Témoins potentiels</textarea>
+                                <br>
+                                <textarea cols="150" rows="10" id="FaitDesc" required>Description des faits</textarea>
+                                <br>
+                                
+
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="container-faq"> <!-- menu déroulant-->
+            
+                    <div class="prez">
+                        <div class="PartiVisible">
+                            <h2>Amandes et peines</h2>
+                            <img src="Fleche.png" alt="croix animation">
+                        </div>
+                        <div class="PanneauDéroulé">
+
+                            </p>
+                            <br> <br>
+        
+        
+                            <h4><u>Amandes appliquée</u></h4>  <!-- CheckBox -->
+                            <p>
+                                <textarea cols="50" rows="2" id="Ammandes" required>Ammandes</textarea>
+                                <
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+            
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="test.js"></script>
+    
+    </body>
+    <div class="centre">
+    <button onclick="EnvoyerRapport()">Valider le rapport</button></div>
+    </html>
